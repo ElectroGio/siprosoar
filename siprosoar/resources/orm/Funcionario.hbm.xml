@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 6/06/2015 07:49:03 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.arauca.domain.Funcionario" table="funcionario" catalog="mydbtest">
+        <id name="idFuncionario" type="java.lang.Integer">
+            <column name="id_funcionario" />
+            <generator class="identity" />
+        </id>
+        <property name="codFuncionario" type="string">
+            <column name="cod_funcionario" length="45" not-null="true" />
+        </property>
+        <property name="nombreFuncionario" type="string">
+            <column name="nombre_funcionario" length="45" not-null="true" />
+        </property>
+        <property name="telefonoFuncionario" type="string">
+            <column name="telefono_funcionario" length="45" />
+        </property>
+        <property name="correoFuncionario" type="string">
+            <column name="correo_funcionario" length="45" />
+        </property>
+        <property name="sectorFuncionario" type="string">
+            <column name="sector_funcionario" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

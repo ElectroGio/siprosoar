@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 6/06/2015 07:49:03 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.arauca.domain.Entidad" table="entidad" catalog="mydbtest">
+        <id name="idEntidad" type="java.lang.Integer">
+            <column name="id_entidad" />
+            <generator class="identity" />
+        </id>
+        <property name="codEntidad" type="string">
+            <column name="cod_entidad" length="45" not-null="true" />
+        </property>
+        <property name="nombreEntidad" type="string">
+            <column name="nombre_entidad" length="45" not-null="true" />
+        </property>
+        <property name="direccionEntidad" type="string">
+            <column name="direccion_entidad" length="45" />
+        </property>
+        <property name="telefonoEntidad" type="string">
+            <column name="telefono_entidad" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

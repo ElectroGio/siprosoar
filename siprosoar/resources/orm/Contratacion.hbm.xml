@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.arauca.domain.Contratacion" table="contratacion">
+        <id name="idContratacion" type="java.lang.Integer">
+            <column name="id_contratacion" />
+            <generator class="identity" />
+        </id>
+        <property name="numProceso" type="string">
+            <column name="num_proceso" length="45" not-null="true" />
+        </property>
+        <property name="vigencia" type="string">
+            <column name="vigencia" length="45" not-null="true" />
+        </property>
+        
+         <property name="idUnidadEjecutora" type="java.lang.Integer">
+            <column name="id_unidad_ejecutora" not-null="true" />
+        </property>
+        
+         <property name="idModalidad" type="java.lang.Integer">
+            <column name="id_modalidad" not-null="true" />
+        </property>
+        
+         <property name="cuantia" type="java.lang.Double">
+            <column name="cuantia" not-null="true" />
+        </property>
+        
+         <property name="idEstado" type="java.lang.Integer">
+            <column name="id_estado" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,73 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/mvc 
+         http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:component-scan base-package="com.arauca.*" />
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/WEB-INF/pages/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+
+	<mvc:resources mapping="/resources/**" location="/resources/mytheme/" />
+	<mvc:annotation-driven />
+
+	<!-- Mapeo de Dao y Services, OJO poner en órden alfabético. -->
+	<bean id="contratoDaoImpl" class="com.arauca.dao.ContratoDaoImpl" />
+	<bean id="contratoServiceImpl" class="com.arauca.services.ContratoServiceImpl" />
+
+	<bean id="dependenciaDaoImpl" class="com.arauca.dao.DependenciaDaoImpl" />
+	<bean id="dependenciaServiceImpl" class="com.arauca.services.DependenciaServiceImpl" />
+
+	<bean id="dimensionPdmDaoImpl" class="com.arauca.dao.DimensionPdmDaoImpl" />
+	<bean id="dimensionPdmServiceImpl" class="com.arauca.services.DimensionPdmServiceImpl" />
+
+	<bean id="entidadDaoImpl" class="com.arauca.dao.EntidadDaoImpl" />
+	<bean id="entidadServiceImpl" class="com.arauca.services.EntidadServiceImpl" />
+
+	<bean id="estadoDaoImpl" class="com.arauca.dao.EstadoDaoImpl" />
+	<bean id="estadoServiceImpl" class="com.arauca.services.EstadoServiceImpl" />
+
+	<bean id="fuenteFinanciacionDaoImpl" class="com.arauca.dao.FuenteFinanciacionDaoImpl" />
+	<bean id="fuenteFinanciacionServiceImpl" class="com.arauca.services.FuenteFinanciacionServiceImpl" />
+
+	<bean id="funcionarioFinanciacionDaoImpl" class="com.arauca.dao.FuncionarioDaoImpl" />
+	<bean id="funcionarioFinanciacionServiceImpl" class="com.arauca.services.FuncionarioServiceImpl" />
+
+	<bean id="modalidadDaoImpl" class="com.arauca.dao.ModalidadDaoImpl" />
+	<bean id="modalidadServiceImpl" class="com.arauca.services.ModalidadServiceImpl" />
+
+	<bean id="programaPdmFinanciacionDaoImpl" class="com.arauca.dao.ProgramaPdmDaoImpl" />
+	<bean id="programaPdmFinanciacionServiceImpl" class="com.arauca.services.ProgramaPdmServiceImpl" />
+
+	<bean id="proyectoDaoImpl" class="com.arauca.dao.ProyectoDaoImpl" />
+	<bean id="proyectoServiceImpl" class="com.arauca.services.ProyectoServiceImpl" />
+
+	<bean id="sectorInversionPdmDaoImpl" class="com.arauca.dao.SectorInversionPdmDaoImpl" />
+	<bean id="sectorInversionPdmServiceImpl" class="com.arauca.services.SectorInversionPdmServiceImpl" />
+
+	<bean id="subprogramaPdmDaoImpl" class="com.arauca.dao.SubprogramaPdmDaoImpl" />
+	<bean id="subprogramaPdmServiceImpl" class="com.arauca.services.SubprogramaPdmServiceImpl" />
+
+	<bean id="unidadEjecutoraDaoImpl" class="com.arauca.dao.UnidadEjecutoraDaoImpl" />
+	<bean id="unidadEjecutoraServiceImpl" class="com.arauca.services.UnidadEjecutoraServiceImpl" />
+
+	<!-- Fin mapeo Servicios y Dao -->
+
+	<bean id="persistenceExceptionTranslationPostProcessor"
+		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+
+
+</beans>

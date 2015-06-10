@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 6/06/2015 07:49:03 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.arauca.domain.Proyecto" table="proyecto" catalog="mydbtest">
+        <id name="idProyecto" type="int">
+            <column name="id_proyecto" />
+            <generator class="assigned" />
+        </id>
+        <property name="codigoBpim" type="string">
+            <column name="codigo_bpim" length="45" not-null="true" />
+        </property>
+        <property name="fechaRadicacion" type="timestamp">
+            <column name="fecha_radicacion" length="19" not-null="true" />
+        </property>
+        <property name="fechaRegistro" type="timestamp">
+            <column name="fecha_registro" length="19" not-null="true" />
+        </property>
+        <property name="denominacionProyectoInversion" type="string">
+            <column name="denominacion_proyecto_inversion" length="250" not-null="true" />
+        </property>
+        <property name="objetivoGeneralProyecto" type="string">
+            <column name="objetivo_general_proyecto" length="250" not-null="true" />
+        </property>
+        <property name="idEntidadRadica" type="int">
+            <column name="id_entidad_radica" not-null="true" />
+        </property>
+        <property name="idFuncionarioResponsable" type="int">
+            <column name="id_funcionario_responsable" not-null="true" />
+        </property>
+        <property name="idDimensionPdm" type="int">
+            <column name="id_dimension_pdm" not-null="true" />
+        </property>
+        <property name="idSectorInversionPdm" type="int">
+            <column name="id_sector_inversion_pdm" not-null="true" />
+        </property>
+        <property name="idProgramaPdm" type="int">
+            <column name="id_programa_pdm" not-null="true" />
+        </property>
+        <property name="idSubprogramaPdm" type="int">
+            <column name="id_subprograma_pdm" not-null="true" />
+        </property>
+        <property name="codigoRubroPresupuestal" type="string">
+            <column name="codigo_rubro_presupuestal" length="45" not-null="true" />
+        </property>
+        <property name="nombreRubroPresupuestal" type="string">
+            <column name="nombre_rubro_presupuestal" length="45" not-null="true" />
+        </property>
+        <property name="idDependenciaAvalViabilidad" type="int">
+            <column name="id_dependencia_aval_viabilidad" not-null="true" />
+        </property>
+        <property name="idFuncionarioExpViabilidad" type="int">
+            <column name="id_funcionario_exp_viabilidad" not-null="true" />
+        </property>
+        <property name="idFuncionarioBpControlPosterior" type="int">
+            <column name="id_funcionario_bp_control_posterior" not-null="true" />
+        </property>
+        <property name="conceptoControlPosterior" type="string">
+            <column name="concepto_control_posterior" length="250" not-null="true" />
+        </property>
+        <property name="metaResultadoPdmDesc" type="string">
+            <column name="meta_resultado_pdm_desc" length="250" not-null="true" />
+        </property>
+        <property name="metaResultadoPdmIndic" type="string">
+            <column name="meta_resultado_pdm_indic" length="250" not-null="true" />
+        </property>
+        <property name="metaResultadoPdmLineaBase" type="string">
+            <column name="meta_resultado_pdm_linea_base" length="45" not-null="true" />
+        </property>
+        <property name="metaResultadoPdmVlrProgramado" type="string">
+            <column name="meta_resultado_pdm_vlr_programado" length="45" not-null="true" />
+        </property>
+        <property name="metaProductoPdmDesc" type="string">
+            <column name="meta_producto_pdm_desc" length="250" not-null="true" />
+        </property>
+        <property name="metaProductoPdmIndic" type="string">
+            <column name="meta_producto_pdm_indic" length="250" not-null="true" />
+        </property>
+        <property name="metaProductoPdmLineaBase" type="string">
+            <column name="meta_producto_pdm_linea_base" length="45" not-null="true" />
+        </property>
+        <property name="metaProductoPdmVlrProgramado" type="string">
+            <column name="meta_producto_pdm_vlr_programado" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

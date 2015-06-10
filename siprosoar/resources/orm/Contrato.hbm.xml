@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 6/06/2015 07:49:03 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.arauca.domain.Contrato" table="contrato">
+        <id name="idContrato" type="java.lang.Integer">
+            <column name="id_contrato" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="modalidad" class="com.arauca.domain.Modalidad" fetch="select">
+            <column name="id_modalidad" not-null="true" />
+        </many-to-one>
+        <many-to-one name="estado" class="com.arauca.domain.Estado" fetch="select">
+            <column name="id_estado" not-null="true" />
+        </many-to-one>
+        <many-to-one name="unidadEjecutora" class="com.arauca.domain.UnidadEjecutora" fetch="select">
+            <column name="id_unidad_ejecutora" not-null="true" />
+        </many-to-one>
+        <property name="numProceso" type="string">
+            <column name="num_proceso" length="45" not-null="true" />
+        </property>
+        <property name="vigencia" type="string">
+            <column name="vigencia" length="45" not-null="true" />
+        </property>
+        <property name="cuantia" type="big_decimal">
+            <column name="cuantia" precision="45" scale="0" not-null="true" />
+        </property>
+        <property name="idUnidadContratacion" type="int">
+            <column name="id_unidad_contratacion" not-null="true" />
+        </property>
+        <property name="numContrato" type="string">
+            <column name="num_contrato" length="45" not-null="true" />
+        </property>
+        <property name="idTipoProceso" type="int">
+            <column name="id_tipo_proceso" not-null="true" />
+        </property>
+        <property name="objetoContrato" type="string">
+            <column name="objeto_contrato" length="250" not-null="true" />
+        </property>
+        <property name="cuantiaAContratar" type="big_decimal">
+            <column name="cuantia_a_contratar" precision="45" scale="0" not-null="true" />
+        </property>
+        <property name="fechaApertura" type="timestamp">
+            <column name="fecha_apertura" length="19" />
+        </property>
+        <property name="fechaCierre" type="timestamp">
+            <column name="fecha_cierre" length="19" />
+        </property>
+        <property name="horaCierre" type="timestamp">
+            <column name="hora_cierre" length="19" />
+        </property>
+        <property name="lugarCierre" type="string">
+            <column name="lugar_cierre" length="45" />
+        </property>
+        <property name="numAdjudicacion" type="string">
+            <column name="num_adjudicacion" length="45" />
+        </property>
+        <property name="fechaAdjudicacion" type="timestamp">
+            <column name="fecha_adjudicacion" length="19" />
+        </property>
+        <property name="montoAdjudicado" type="big_decimal">
+            <column name="monto_adjudicado" precision="45" scale="0" />
+        </property>
+        <property name="plazoAdjudicado" type="string">
+            <column name="plazo_adjudicado" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

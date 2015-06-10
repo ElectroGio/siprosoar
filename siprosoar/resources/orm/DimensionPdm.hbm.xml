@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 6/06/2015 07:49:03 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.arauca.domain.DimensionPdm" table="dimension_pdm" catalog="mydbtest">
+        <id name="idDimensionPdm" type="int">
+            <column name="id_dimension_pdm" />
+            <generator class="assigned" />
+        </id>
+        <property name="codDimensionPdm" type="string">
+            <column name="cod_dimension_pdm" length="45" not-null="true" />
+        </property>
+        <property name="nombreDimensionPdm" type="string">
+            <column name="nombre_dimension_pdm" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
